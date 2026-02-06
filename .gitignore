@@ -1,0 +1,5 @@
+data/
+ET0_new/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
