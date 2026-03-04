@@ -1,0 +1,5 @@
+City,Temp (T),Humidity (RH),Wind (WS),Radiation (Rs),Pressure (P),Dominant Feature
+Barmer,0.0423,0.0252,0.0419,0.1874,0.004,Radiation (Rs)
+Bikaner,0.0422,0.0215,0.0443,0.181,0.0031,Radiation (Rs)
+Jaisalmer,0.0419,0.0246,0.0466,0.1891,0.0044,Radiation (Rs)
+Jodhpur,0.0412,0.026,0.0363,0.1821,0.0027,Radiation (Rs)
