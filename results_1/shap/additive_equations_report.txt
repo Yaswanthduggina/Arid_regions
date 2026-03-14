@@ -1,0 +1,95 @@
+XGBoost SHAP Additive Contribution Equations
+============================================
+Formula: ETo = Base_Value + SHAP(T) + SHAP(RH) + SHAP(WS) + SHAP(Rs) + SHAP(P)
+
+--- City: BARMER ---
+
+[Seasonal Equations]
+ETo(Summer      ) =  0.285 (Base)  + 0.035 (T )  + 0.010 (RH)  + 0.024 (WS)  + 0.047 (Rs)  + 0.005 (P )
+ETo(Monsoon     ) =  0.285 (Base)  + 0.011 (T )  - 0.027 (RH)  + 0.013 (WS)  + 0.002 (Rs)  + 0.004 (P )
+ETo(Post-Monsoon) =  0.285 (Base)  - 0.017 (T )  + 0.008 (RH)  - 0.036 (WS)  - 0.012 (Rs)  + 0.001 (P )
+ETo(Winter      ) =  0.285 (Base)  - 0.046 (T )  + 0.016 (RH)  - 0.016 (WS)  - 0.011 (Rs)  - 0.001 (P )
+
+[Monthly Equations]
+ETo(Jan         ) =  0.285 (Base)  - 0.063 (T )  + 0.012 (RH)  - 0.014 (WS)  - 0.029 (Rs)  - 0.002 (P )
+ETo(Feb         ) =  0.285 (Base)  - 0.048 (T )  + 0.017 (RH)  - 0.014 (WS)  - 0.006 (Rs)  - 0.002 (P )
+ETo(Mar         ) =  0.285 (Base)  - 0.016 (T )  + 0.020 (RH)  - 0.018 (WS)  + 0.027 (Rs)  + 0.001 (P )
+ETo(Apr         ) =  0.285 (Base)  + 0.019 (T )  + 0.022 (RH)  - 0.005 (WS)  + 0.049 (Rs)  + 0.004 (P )
+ETo(May         ) =  0.285 (Base)  + 0.043 (T )  + 0.012 (RH)  + 0.032 (WS)  + 0.057 (Rs)  + 0.006 (P )
+ETo(Jun         ) =  0.285 (Base)  + 0.042 (T )  - 0.006 (RH)  + 0.044 (WS)  + 0.034 (Rs)  + 0.005 (P )
+ETo(Jul         ) =  0.285 (Base)  + 0.023 (T )  - 0.025 (RH)  + 0.031 (WS)  + 0.003 (Rs)  + 0.004 (P )
+ETo(Aug         ) =  0.285 (Base)  + 0.006 (T )  - 0.034 (RH)  + 0.016 (WS)  - 0.000 (Rs)  + 0.004 (P )
+ETo(Sep         ) =  0.285 (Base)  + 0.003 (T )  - 0.024 (RH)  - 0.009 (WS)  + 0.004 (Rs)  + 0.004 (P )
+ETo(Oct         ) =  0.285 (Base)  - 0.004 (T )  + 0.004 (RH)  - 0.038 (WS)  - 0.002 (Rs)  + 0.002 (P )
+ETo(Nov         ) =  0.285 (Base)  - 0.032 (T )  + 0.013 (RH)  - 0.033 (WS)  - 0.022 (Rs)  - 0.001 (P )
+ETo(Dec         ) =  0.285 (Base)  - 0.056 (T )  + 0.012 (RH)  - 0.020 (WS)  - 0.037 (Rs)  - 0.002 (P )
+
+
+--- City: BIKANER ---
+
+[Seasonal Equations]
+ETo(Summer      ) =  0.278 (Base)  + 0.035 (T )  + 0.015 (RH)  + 0.019 (WS)  + 0.054 (Rs)  + 0.002 (P )
+ETo(Monsoon     ) =  0.278 (Base)  + 0.018 (T )  - 0.021 (RH)  + 0.014 (WS)  + 0.015 (Rs)  + 0.003 (P )
+ETo(Post-Monsoon) =  0.278 (Base)  - 0.020 (T )  + 0.008 (RH)  - 0.030 (WS)  - 0.020 (Rs)  + 0.001 (P )
+ETo(Winter      ) =  0.278 (Base)  - 0.049 (T )  + 0.009 (RH)  - 0.018 (WS)  - 0.022 (Rs)  - 0.001 (P )
+
+[Monthly Equations]
+ETo(Jan         ) =  0.278 (Base)  - 0.063 (T )  + 0.005 (RH)  - 0.020 (WS)  - 0.043 (Rs)  - 0.002 (P )
+ETo(Feb         ) =  0.278 (Base)  - 0.053 (T )  + 0.011 (RH)  - 0.014 (WS)  - 0.020 (Rs)  - 0.002 (P )
+ETo(Mar         ) =  0.278 (Base)  - 0.025 (T )  + 0.015 (RH)  - 0.014 (WS)  + 0.023 (Rs)  - 0.001 (P )
+ETo(Apr         ) =  0.278 (Base)  + 0.012 (T )  + 0.022 (RH)  - 0.005 (WS)  + 0.059 (Rs)  + 0.001 (P )
+ETo(May         ) =  0.278 (Base)  + 0.043 (T )  + 0.020 (RH)  + 0.022 (WS)  + 0.062 (Rs)  + 0.003 (P )
+ETo(Jun         ) =  0.278 (Base)  + 0.048 (T )  + 0.003 (RH)  + 0.038 (WS)  + 0.040 (Rs)  + 0.003 (P )
+ETo(Jul         ) =  0.278 (Base)  + 0.030 (T )  - 0.020 (RH)  + 0.027 (WS)  + 0.009 (Rs)  + 0.003 (P )
+ETo(Aug         ) =  0.278 (Base)  + 0.016 (T )  - 0.026 (RH)  + 0.019 (WS)  + 0.024 (Rs)  + 0.003 (P )
+ETo(Sep         ) =  0.278 (Base)  + 0.009 (T )  - 0.017 (RH)  - 0.006 (WS)  + 0.012 (Rs)  + 0.003 (P )
+ETo(Oct         ) =  0.278 (Base)  - 0.008 (T )  + 0.006 (RH)  - 0.029 (WS)  - 0.009 (Rs)  + 0.002 (P )
+ETo(Nov         ) =  0.278 (Base)  - 0.034 (T )  + 0.010 (RH)  - 0.030 (WS)  - 0.032 (Rs)  - 0.000 (P )
+ETo(Dec         ) =  0.278 (Base)  - 0.058 (T )  + 0.006 (RH)  - 0.023 (WS)  - 0.052 (Rs)  - 0.001 (P )
+
+
+--- City: JAISALMER ---
+
+[Seasonal Equations]
+ETo(Summer      ) =  0.291 (Base)  + 0.030 (T )  + 0.011 (RH)  + 0.021 (WS)  + 0.043 (Rs)  + 0.004 (P )
+ETo(Monsoon     ) =  0.291 (Base)  + 0.014 (T )  - 0.024 (RH)  + 0.019 (WS)  + 0.015 (Rs)  + 0.005 (P )
+ETo(Post-Monsoon) =  0.291 (Base)  - 0.018 (T )  + 0.010 (RH)  - 0.035 (WS)  - 0.018 (Rs)  - 0.001 (P )
+ETo(Winter      ) =  0.291 (Base)  - 0.047 (T )  + 0.014 (RH)  - 0.023 (WS)  - 0.020 (Rs)  - 0.003 (P )
+
+[Monthly Equations]
+ETo(Jan         ) =  0.291 (Base)  - 0.063 (T )  + 0.010 (RH)  - 0.023 (WS)  - 0.038 (Rs)  - 0.004 (P )
+ETo(Feb         ) =  0.291 (Base)  - 0.049 (T )  + 0.016 (RH)  - 0.021 (WS)  - 0.021 (Rs)  - 0.003 (P )
+ETo(Mar         ) =  0.291 (Base)  - 0.021 (T )  + 0.019 (RH)  - 0.023 (WS)  + 0.017 (Rs)  - 0.001 (P )
+ETo(Apr         ) =  0.291 (Base)  + 0.011 (T )  + 0.023 (RH)  - 0.008 (WS)  + 0.037 (Rs)  + 0.002 (P )
+ETo(May         ) =  0.291 (Base)  + 0.037 (T )  + 0.013 (RH)  + 0.022 (WS)  + 0.053 (Rs)  + 0.005 (P )
+ETo(Jun         ) =  0.291 (Base)  + 0.043 (T )  - 0.003 (RH)  + 0.048 (WS)  + 0.039 (Rs)  + 0.005 (P )
+ETo(Jul         ) =  0.291 (Base)  + 0.027 (T )  - 0.022 (RH)  + 0.035 (WS)  + 0.016 (Rs)  + 0.005 (P )
+ETo(Aug         ) =  0.291 (Base)  + 0.010 (T )  - 0.030 (RH)  + 0.022 (WS)  + 0.018 (Rs)  + 0.005 (P )
+ETo(Sep         ) =  0.291 (Base)  + 0.005 (T )  - 0.019 (RH)  - 0.001 (WS)  + 0.009 (Rs)  + 0.004 (P )
+ETo(Oct         ) =  0.291 (Base)  - 0.004 (T )  + 0.007 (RH)  - 0.035 (WS)  + 0.002 (Rs)  + 0.001 (P )
+ETo(Nov         ) =  0.291 (Base)  - 0.033 (T )  + 0.014 (RH)  - 0.035 (WS)  - 0.039 (Rs)  - 0.003 (P )
+ETo(Dec         ) =  0.291 (Base)  - 0.057 (T )  + 0.012 (RH)  - 0.027 (WS)  - 0.040 (Rs)  - 0.004 (P )
+
+
+--- City: JODHPUR ---
+
+[Seasonal Equations]
+ETo(Summer      ) =  0.269 (Base)  + 0.040 (T )  + 0.014 (RH)  + 0.026 (WS)  + 0.045 (Rs)  + 0.002 (P )
+ETo(Monsoon     ) =  0.269 (Base)  + 0.001 (T )  - 0.034 (RH)  + 0.006 (WS)  - 0.003 (Rs)  + 0.001 (P )
+ETo(Post-Monsoon) =  0.269 (Base)  - 0.018 (T )  + 0.005 (RH)  - 0.028 (WS)  - 0.013 (Rs)  + 0.002 (P )
+ETo(Winter      ) =  0.269 (Base)  - 0.039 (T )  + 0.016 (RH)  - 0.015 (WS)  - 0.018 (Rs)  - 0.000 (P )
+
+[Monthly Equations]
+ETo(Jan         ) =  0.269 (Base)  - 0.054 (T )  + 0.013 (RH)  - 0.015 (WS)  - 0.033 (Rs)  - 0.001 (P )
+ETo(Feb         ) =  0.269 (Base)  - 0.041 (T )  + 0.018 (RH)  - 0.014 (WS)  - 0.014 (Rs)  - 0.001 (P )
+ETo(Mar         ) =  0.269 (Base)  - 0.012 (T )  + 0.022 (RH)  - 0.012 (WS)  + 0.024 (Rs)  + 0.002 (P )
+ETo(Apr         ) =  0.269 (Base)  + 0.022 (T )  + 0.026 (RH)  + 0.001 (WS)  + 0.035 (Rs)  + 0.002 (P )
+ETo(May         ) =  0.269 (Base)  + 0.051 (T )  + 0.019 (RH)  + 0.037 (WS)  + 0.059 (Rs)  + 0.003 (P )
+ETo(Jun         ) =  0.269 (Base)  + 0.045 (T )  - 0.004 (RH)  + 0.038 (WS)  + 0.040 (Rs)  + 0.002 (P )
+ETo(Jul         ) =  0.269 (Base)  + 0.013 (T )  - 0.032 (RH)  + 0.022 (WS)  - 0.006 (Rs)  + 0.001 (P )
+ETo(Aug         ) =  0.269 (Base)  - 0.004 (T )  - 0.040 (RH)  + 0.007 (WS)  - 0.003 (Rs)  + 0.002 (P )
+ETo(Sep         ) =  0.269 (Base)  - 0.005 (T )  - 0.030 (RH)  - 0.012 (WS)  + 0.002 (Rs)  + 0.002 (P )
+ETo(Oct         ) =  0.269 (Base)  - 0.008 (T )  - 0.001 (RH)  - 0.029 (WS)  + 0.001 (Rs)  + 0.002 (P )
+ETo(Nov         ) =  0.269 (Base)  - 0.028 (T )  + 0.011 (RH)  - 0.027 (WS)  - 0.028 (Rs)  + 0.001 (P )
+ETo(Dec         ) =  0.269 (Base)  - 0.048 (T )  + 0.012 (RH)  - 0.019 (WS)  - 0.051 (Rs)  - 0.001 (P )
+

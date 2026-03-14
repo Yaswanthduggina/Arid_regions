@@ -76,7 +76,6 @@ for city in CITIES:
     model = joblib.load(mdl)
 
     # ── Stratified sample by month for representativeness ─────────────
-    rng = np.random.default_rng(RANDOM_SEED)
     if len(df) > SHAP_SAMPLE:
         sample_idx = df.groupby("month", group_keys=False).apply(
             lambda g: g.sample(

@@ -4,7 +4,6 @@ Loads hourly ETo CSVs from ET0_new/, adds temporal features,
 filters meaningful rows, saves ML-ready CSVs to results/ml_input/.
 """
 import pandas as pd
-import numpy as np
 import os
 
 # ─── Config ───────────────────────────────────────────────────────────

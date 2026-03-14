@@ -127,3 +127,78 @@ Monthly SHAP shows seasonal shift	Visual inspection
 NOTE
 
 Physical validation: if Rs is NOT the dominant SHAP feature in summer for Jaisalmer (an extreme desert), something is wrong with the data preparation step. This is the key physics sanity check
+
+
+
+
+
+
+Generate SHAP Additive Equations
+The mentor requested an additive formula ($ETo = aX_1 + bX_2 + ...$) to understand feature contributions per month and season. Because we use XGBoost, we will use SHAP values, which provide the exact non-linear equivalent: $ETo_{predicted} = \text{Base Value} + SHAP_{Temp} + SHAP_{RH} + SHAP_{Wind} + SHAP_{Solar} + SHAP_{Precip}$.
+
+By grouping these SHAP values by month and season, we can provide the exact average contribution equations.
+
+Proposed Changes
+Scripts
+[NEW] 
+06_shap_equations.py
+A new script will be created to perform the following:
+
+Load the pre-trained XGBoost models from results/models/ to extract the shap.TreeExplainer(model).expected_value (the Base Value).
+Load the previously calculated SHAP values from results/shap/{city}_shap_values.csv.
+Group the SHAP values by month and 
+season
+.
+Calculate the mean SHAP contribution for each feature in each time period.
+Generate two outputs:
+A detailed CSV file (results/shap/seasonal_monthly_equations.csv) containing the tabular data.
+A formatted Text file report (results/shap/additive_equations_report.txt) that explicitly writes out the math equations for easy copy-pasting for the mentor.
+Verification Plan
+Automated Tests
+Run the new Python script: python "c:\Reasearch paper\scripts\ml_shap\06_shap_equations.py"
+
+Manual Verification
+Inspect the generated results/shap/seasonal_monthly_equations.csv to ensure values populate correctly.
+Read the results/shap/additive_equations_report.txt and verify that for any given month/season, the sum of the Base Value and all SHAP components approximately equals the mean ETo for that period.
+
+
+
+
+
+
+
+
+
+Your mentor's formula $ETo = aX_1 + bX_2 + cX_3 + dX_4 + eX_5$ is the classic formula for Linear Regression, where $a, b, c, d, e$ are fixed coefficients multiplied by your raw features (Temperature, Relative Humidity, etc.).
+
+Because we are using XGBoost (a non-linear, tree-based model), we don't have single fixed coefficients like $a$ or $b$. Instead, we use SHAP, which is mathematically proven to do exactly what your mentor is asking for, but in a much smarter, dynamic way.
+
+Here is exactly how we will implement this for your monthly and seasonal analysis:
+
+1. The SHAP Additive Formula (The XGBoost equivalent of your mentor's formula)
+SHAP uses an "additive feature attribution" method. For every single prediction our model makes, SHAP breaks it down perfectly into an equation that looks very similar to your mentor's:
+
+$$ETo_{predicted} = \text{Base Value} + SHAP_{Temp} + SHAP_{RH} + SHAP_{Wind} + SHAP_{Solar} + SHAP_{Precip}$$
+
+Base Value: The average ETo prediction across all our data.
+$SHAP_{Temp}$: This is the equivalent of $aX_1$. But instead of a fixed $a \times Temp$, it calculates the exact contribution (in mm/hr) that Temperature had for that specific moment.
+Why this is better: If Temperature is $45^\circ C$, its contribution might skyrocket non-linearly. A linear equation ($aX_1$) can't capture that, but XGBoost+SHAP captures it perfectly.
+
+2. How we aggregate this for Months and Seasons
+Since SHAP values are additive and use the exact same units as ETo ($mm/hr$), we can group them by time periods!
+
+Step A: Calculate SHAP for every row We run all our data through the SHAP explainer. Every single hour in our dataset gets its own $SHAP_{Temp}, SHAP_{RH}$, etc.
+
+Step B: Group by Month / Season We add a Month and Season column to our dataset. Then we group the data and take the average.
+
+This allows us to output a clear equation for every single month or season. For example, the output will look like this:
+
+May (Summer): $$ETo (May) = 0.15 \text{ (Base)} + 0.12 \text{ (Solar)} + 0.08 \text{ (Temp)} + 0.03 \text{ (Wind)} - 0.05 \text{ (RH)} + 0.00 \text{ (Precip)} $$ (Notice how Humidity is negative, meaning it reduces Evapotranspiration!)
+
+January (Winter): $$ETo (Jan) = 0.15 \text{ (Base)} - 0.08 \text{ (Solar)} - 0.05 \text{ (Temp)} - 0.01 \text{ (Wind)} + 0.02 \text{ (RH)} + 0.00 \text{ (Precip)} $$
+
+3. What we will actually code:
+Generate a combined SHAP dataset: We will extract the raw SHAP values for every hour, for every city.
+Add Time Categories: We will extract the month and define seasons (e.g., Summer, Monsoon, Post-Monsoon, Winter) based on your timestamp.
+Calculate the Mean: We will calculate the mean SHAP values grouped by City, Month, and Season.
+Export CSV / Plots: We can export this as a CSV table so you can directly show your mentor the "formula" (the mean contributions) for each month/season. We can also make stacked bar charts showing exactly how the formula shifts throughout the year.

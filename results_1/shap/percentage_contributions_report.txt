@@ -1,0 +1,95 @@
+XGBoost SHAP Percentage Contributions
+=====================================
+Formula: Percentage(F) = |SHAP(F)| / sum(|SHAP(all_features)|) * 100
+
+--- City: BARMER ---
+
+[Seasonal % Contribution]
+Summer       | T:  13.4%  RH:   7.5%  WS:  15.7%  Rs:  61.8%  P:   1.5%
+Monsoon      | T:  10.5%  RH:  11.1%  WS:  13.1%  Rs:  63.9%  P:   1.4%
+Post-Monsoon | T:  12.2%  RH:   7.1%  WS:  15.8%  Rs:  63.8%  P:   1.1%
+Winter       | T:  18.4%  RH:   7.6%  WS:  12.0%  Rs:  60.8%  P:   1.2%
+
+[Monthly % Contribution]
+Jan          | T:  23.8%  RH:   7.4%  WS:  10.6%  Rs:  57.0%  P:   1.2%
+Feb          | T:  17.6%  RH:   8.1%  WS:  12.5%  Rs:  60.6%  P:   1.1%
+Mar          | T:  11.4%  RH:   7.9%  WS:  13.2%  Rs:  66.4%  P:   1.1%
+Apr          | T:  11.7%  RH:   8.0%  WS:  13.5%  Rs:  65.4%  P:   1.4%
+May          | T:  14.3%  RH:   7.5%  WS:  15.7%  Rs:  60.9%  P:   1.6%
+Jun          | T:  14.1%  RH:   7.1%  WS:  17.8%  Rs:  59.4%  P:   1.6%
+Jul          | T:  12.0%  RH:  10.2%  WS:  16.0%  Rs:  60.3%  P:   1.5%
+Aug          | T:   9.6%  RH:  12.5%  WS:  12.0%  Rs:  64.5%  P:   1.4%
+Sep          | T:   9.9%  RH:  10.6%  WS:  11.1%  Rs:  67.1%  P:   1.4%
+Oct          | T:  10.6%  RH:   6.9%  WS:  16.2%  Rs:  65.1%  P:   1.2%
+Nov          | T:  14.2%  RH:   7.2%  WS:  15.3%  Rs:  62.1%  P:   1.1%
+Dec          | T:  22.3%  RH:   7.0%  WS:  11.3%  Rs:  58.2%  P:   1.2%
+
+
+--- City: BIKANER ---
+
+[Seasonal % Contribution]
+Summer       | T:  13.0%  RH:   6.6%  WS:  17.2%  Rs:  62.0%  P:   1.2%
+Monsoon      | T:  10.6%  RH:   8.7%  WS:  15.1%  Rs:  64.4%  P:   1.2%
+Post-Monsoon | T:  13.1%  RH:   6.9%  WS:  15.4%  Rs:  63.7%  P:   1.0%
+Winter       | T:  20.0%  RH:   7.2%  WS:  13.0%  Rs:  58.9%  P:   0.9%
+
+[Monthly % Contribution]
+Jan          | T:  25.4%  RH:   6.7%  WS:  12.3%  Rs:  54.7%  P:   0.9%
+Feb          | T:  19.9%  RH:   7.4%  WS:  12.9%  Rs:  58.8%  P:   0.9%
+Mar          | T:  12.2%  RH:   7.9%  WS:  13.8%  Rs:  65.3%  P:   0.9%
+Apr          | T:  10.7%  RH:   7.6%  WS:  14.5%  Rs:  66.1%  P:   1.2%
+May          | T:  13.5%  RH:   6.7%  WS:  17.6%  Rs:  61.0%  P:   1.2%
+Jun          | T:  14.5%  RH:   5.6%  WS:  19.4%  Rs:  59.3%  P:   1.2%
+Jul          | T:  11.9%  RH:   8.2%  WS:  17.3%  Rs:  61.4%  P:   1.2%
+Aug          | T:   9.6%  RH:   9.5%  WS:  14.7%  Rs:  65.0%  P:   1.2%
+Sep          | T:  10.3%  RH:   8.4%  WS:  12.9%  Rs:  67.1%  P:   1.2%
+Oct          | T:  11.0%  RH:   6.7%  WS:  15.5%  Rs:  65.8%  P:   1.1%
+Nov          | T:  15.5%  RH:   7.1%  WS:  15.3%  Rs:  61.3%  P:   0.8%
+Dec          | T:  24.2%  RH:   6.5%  WS:  12.9%  Rs:  55.5%  P:   0.8%
+
+
+--- City: JAISALMER ---
+
+[Seasonal % Contribution]
+Summer       | T:  12.5%  RH:   7.4%  WS:  16.9%  Rs:  61.9%  P:   1.4%
+Monsoon      | T:  10.4%  RH:   9.5%  WS:  14.8%  Rs:  63.7%  P:   1.5%
+Post-Monsoon | T:  12.2%  RH:   7.5%  WS:  16.2%  Rs:  62.8%  P:   1.3%
+Winter       | T:  18.4%  RH:   7.6%  WS:  13.4%  Rs:  59.1%  P:   1.4%
+
+[Monthly % Contribution]
+Jan          | T:  23.8%  RH:   7.1%  WS:  12.3%  Rs:  55.2%  P:   1.6%
+Feb          | T:  17.8%  RH:   8.0%  WS:  13.2%  Rs:  59.7%  P:   1.3%
+Mar          | T:  11.3%  RH:   8.0%  WS:  14.7%  Rs:  64.8%  P:   1.2%
+Apr          | T:  10.7%  RH:   8.3%  WS:  14.7%  Rs:  65.0%  P:   1.2%
+May          | T:  12.9%  RH:   7.3%  WS:  16.5%  Rs:  61.8%  P:   1.5%
+Jun          | T:  13.7%  RH:   6.6%  WS:  19.1%  Rs:  59.1%  P:   1.5%
+Jul          | T:  11.8%  RH:   8.7%  WS:  17.2%  Rs:  60.7%  P:   1.6%
+Aug          | T:   9.5%  RH:  10.6%  WS:  14.0%  Rs:  64.3%  P:   1.6%
+Sep          | T:   9.8%  RH:   9.3%  WS:  13.0%  Rs:  66.4%  P:   1.4%
+Oct          | T:  10.1%  RH:   7.4%  WS:  16.3%  Rs:  65.1%  P:   1.2%
+Nov          | T:  14.8%  RH:   7.7%  WS:  16.1%  Rs:  60.0%  P:   1.4%
+Dec          | T:  22.0%  RH:   7.2%  WS:  13.4%  Rs:  55.8%  P:   1.7%
+
+
+--- City: JODHPUR ---
+
+[Seasonal % Contribution]
+Summer       | T:  14.6%  RH:   7.3%  WS:  15.1%  Rs:  61.9%  P:   1.0%
+Monsoon      | T:  10.5%  RH:  13.0%  WS:  11.3%  Rs:  64.4%  P:   0.8%
+Post-Monsoon | T:  13.2%  RH:   7.7%  WS:  13.0%  Rs:  65.1%  P:   1.1%
+Winter       | T:  17.5%  RH:   8.2%  WS:  10.9%  Rs:  62.5%  P:   0.9%
+
+[Monthly % Contribution]
+Jan          | T:  21.4%  RH:   7.8%  WS:  10.2%  Rs:  59.8%  P:   0.8%
+Feb          | T:  16.8%  RH:   8.4%  WS:  10.8%  Rs:  63.1%  P:   0.9%
+Mar          | T:  12.5%  RH:   8.4%  WS:  11.5%  Rs:  66.4%  P:   1.1%
+Apr          | T:  13.1%  RH:   8.5%  WS:  12.6%  Rs:  64.7%  P:   1.2%
+May          | T:  15.6%  RH:   7.0%  WS:  16.0%  Rs:  60.4%  P:   1.0%
+Jun          | T:  14.9%  RH:   6.6%  WS:  16.6%  Rs:  61.0%  P:   0.9%
+Jul          | T:  11.1%  RH:  12.1%  WS:  13.7%  Rs:  62.3%  P:   0.8%
+Aug          | T:   9.7%  RH:  14.9%  WS:  10.3%  Rs:  64.4%  P:   0.8%
+Sep          | T:  10.6%  RH:  12.1%  WS:   9.8%  Rs:  66.7%  P:   0.8%
+Oct          | T:  12.0%  RH:   7.4%  WS:  13.1%  Rs:  66.4%  P:   1.1%
+Nov          | T:  14.6%  RH:   8.0%  WS:  12.9%  Rs:  63.4%  P:   1.1%
+Dec          | T:  20.5%  RH:   8.1%  WS:  10.8%  Rs:  59.9%  P:   0.7%
+

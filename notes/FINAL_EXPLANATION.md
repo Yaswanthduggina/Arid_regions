@@ -1,9 +1,4 @@
 # Final Project Explanation: Physics-Guided ML Interpretability for ETo
-
-This document provides a comprehensive, mentor-ready explanation of the entire machine learning and interpretation workflow developed for this research project. It explains exactly what the code does, why it does it, and what the results mean physically and scientifically.
-
----
-
 ## 1. The Core Research Philosophy
 
 **Background:** We calculated the FAO-56 Penman-Monteith Reference Evapotranspiration (ETo) using 25 years of NASA POWER meteorological data for four arid cities in Rajasthan (Barmer, Bikaner, Jaisalmer, Jodhpur). FAO-56 is a complex, non-linear physics equation that gives us the "ground truth" ETo value.
