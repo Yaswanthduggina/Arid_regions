@@ -3,5 +3,6 @@
     "workbench.preferredDarkColorTheme": "Default High Contrast",
     "workbench.editor.decorations.colors": true,
     "workbench.colorTheme": "Default Dark Modern",
-    "workbench.preferredLightColorTheme": "Default High Contrast Light"
+    "workbench.preferredLightColorTheme": "Default High Contrast Light",
+    "workbench.view.alwaysShowHeaderActions": false
 }
